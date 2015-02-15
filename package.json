@@ -1,0 +1,11 @@
+{
+	"name": "prism-vm",
+	"description": "A self-contained vm for running Prism",
+	"version": "1.0.0",
+	"dependencies": {
+		"prism": "git://github.com/MikeyBurkman/prism.git"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	}
+}
