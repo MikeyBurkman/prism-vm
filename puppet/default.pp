@@ -8,3 +8,7 @@ package { 'openjdk-7-jre':
 package { 'curl':
   ensure => latest
 }
+
+package {'git':
+  ensure => latest
+}

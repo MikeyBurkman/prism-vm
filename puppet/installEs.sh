@@ -39,8 +39,8 @@ if [ ! -d "$INST_DIR" ]; then
 	# Add a line to bash rc so that it automatically goes to /vagrant on login
 	echo "cd /vagrant" >> /home/vagrant/.bashrc
 
-	# And add an alias to run the node script more easily
-	echo "alias run=\"node /vagrant/lib/run.js\"" >> /home/vagrant/.bashrc
+	# Add the PRISM_HOME environment variable so Prism knows where to find our configs
+	echo "PRISM_HOME=\"/vagrant\"" >> /etc/environment
 fi
 
 # For some reason, the latest nodejs package available in Ubuntu is 0.6
