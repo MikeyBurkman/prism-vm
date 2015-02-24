@@ -1,5 +1,5 @@
-# csv-analyze-es
-A VM created with Vagrant/VirtualBox that provides Elasticsearch and Kibana instances, as well as a NodeJs application for parsing CSV files and inserting them into ES. 
+# prism-vm
+A VM created with Vagrant/VirtualBox that provides Elasticsearch and Kibana instances, as well as a NodeJs application (prism) for parsing CSV files and inserting them into ES. 
 
 ## Preparation
 
