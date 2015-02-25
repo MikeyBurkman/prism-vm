@@ -1,6 +1,8 @@
 # prism-vm
 A VM created with Vagrant/VirtualBox that provides Elasticsearch and Kibana instances, as well as a NodeJs application [Prism](https://github.com/MikeyBurkman/prism) for parsing CSV or JSON files and inserting them into ES. 
 
+Use this when testing stuff, or doing local analysis. For anything real, you'll probably want a more stable ES instance, such as an AWS Instance (See  [this](http://thediscoblog.com/blog/2013/05/17/elasticsearch-on-ec2-in-less-than-60-seconds/) or [this](http://chrissimpson.co.uk/using-elasticsearch-on-amazon-ec2.html))
+
 ## Preparation
 
 ### Required Installations
