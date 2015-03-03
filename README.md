@@ -23,21 +23,17 @@ Use this when testing stuff, or doing local analysis. For anything real, you'll 
 ## Do some real work!
 
 ### Indexing a CSV/JSON File
- 1. Simply call `./prism index` to create the ES index and start reading/indexing the CSV file given in config.js
-   - If your config is declared in a different file, add that to the end of the call. IE: `./prism index myConfig.js`
+ 1. Simply call `prismIndex` to create the ES index and start reading/indexing the CSV file given in config.js
+   - If your config is declared in a different file, add that to the end of the call. IE: `prismIndex --config myConfig.js`
  2. That should do it! If your file is large, it may take a while to complete!
  - Remember that if you index the same file multiple times without clearing the index (below), you'll get duplicate data!
 
 ### Clearing an Index
- 1. If you want to get rid of an index in ES (this what the file was converted into), then call `./prism clear`.
-   - Just like when indexing, you can specify other config files. IE: `./prism clear myConfig.js`
-
-### Clearing and Re-Indexing
- - If experimenting with a CSV/JSON or config file, it may be nice to clear and re-index in one step.
- - Use the `-c` or `--clear` argument when calling index to do this. IE: `./prism index -c` or `./prism index --clear`
+ 1. If you want to get rid of an index in ES (this what the file was converted into), then call `prismErase`.
+   - Just like when indexing, you can specify other config files. IE: `prismErase --config myConfig.js`
 
 ### Help!
- - Adding `--help` as an argument to any of the above calls will spit out some help. IE: `./prism --help` or `./prism index --help`
+ - Adding `--help` as an argument to any of the above calls will spit out some help. IE: `prismIndex --help` or `prismErase --help`
 
 ## See Some Cool Stuff!
  1. Navigate to `http://localhost:9201` in your browser (not in the VM) to bring up Kibana.
