@@ -28,6 +28,6 @@ Vagrant.configure("2") do |config|
      puppet.options = "--verbose"
   end
 
-  config.vm.provision "shell", path: "puppet/installEs.sh"
+  config.vm.provision "shell", path: "puppet/install.sh"
 
 end

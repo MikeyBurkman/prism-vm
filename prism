@@ -1,3 +1,0 @@
-#!/bin/bash
-
-node /vagrant/node_modules/prism $@

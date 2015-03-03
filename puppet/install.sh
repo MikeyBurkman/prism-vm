@@ -36,18 +36,26 @@ if [ ! -d "$INST_DIR" ]; then
 	echo "Elasticsearch version $ES_VERSION" > $INST_DIR/versions.txt
 	echo "Kibana version $KIBANA_VERSION" >> $INST_DIR/versions.txt
 
+	# Add some useful aliases
+	echo "alias prismIndex='node /vagrant/node_modules/prism index'" >> /home/vagrant/.bashrc
+	echo "alias prismErase='node /vagrant/node_modules/prism erase'" >> /home/vagrant/.bashrc
+
 	# Add a line to bash rc so that it automatically goes to /vagrant on login
 	echo "cd /vagrant" >> /home/vagrant/.bashrc
 
 	# Add the PRISM_HOME environment variable so Prism knows where to find our configs
 	echo "PRISM_HOME=\"/vagrant\"" >> /etc/environment
+
+	# For some reason, the latest nodejs package available in Ubuntu is 0.6
+	# So instead, just do it the old fashioned way
+	echo "Installing NodeJs modules"
+	curl -sL https://deb.nodesource.com/setup | sudo bash -
+	sudo apt-get install -y nodejs
+
+	# Download a nodejs file server
+	npm install -g serve
 fi
 
-# For some reason, the latest nodejs package available in Ubuntu is 0.6
-# So instead, just do it the old fashioned way
-echo "Installing NodeJs modules"
-curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs
 cd /vagrant
 npm install
 
